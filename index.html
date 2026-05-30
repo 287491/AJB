@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>AJB</title>
+    <style>
+        :root{--brand:#0b69ff;--bg:#ffffff;--text:#0f1724}
+        html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--text)}
+        header{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;background:var(--brand);color:#fff}
+        .brand{display:flex;align-items:center;gap:.75rem}
+        .logo{width:40px;height:40px;border-radius:8px;background:#fff;color:var(--brand);display:flex;align-items:center;justify-content:center;font-weight:700}
+        .site-title{margin:0;font-size:1rem}
+        nav a{color:inherit;text-decoration:none;margin-left:1rem;font-weight:600}
+        nav a:hover{opacity:.9}
+        @media (max-width:600px){nav{display:none}}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="brand">
+            <div class="logo">AJ</div>
+            <h1 class="site-title">AJB</h1>
+        </div>
+
+        <nav aria-label="Primary navigation">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <main></main>
+</body>
+</html>
