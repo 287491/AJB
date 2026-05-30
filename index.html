@@ -6,14 +6,21 @@
     <title>AJB</title>
     <style>
         :root{--brand:#0b69ff;--bg:#ffffff;--text:#0f1724}
-        html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--text)}
-        header{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;background:var(--brand);color:#fff}
+        html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:var(--bg)}
+        header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 1.25rem;background:var(--brand);color:#fff}
         .brand{display:flex;align-items:center;gap:.75rem}
         .logo{width:40px;height:40px;border-radius:8px;background:#fff;color:var(--brand);display:flex;align-items:center;justify-content:center;font-weight:700}
         .site-title{margin:0;font-size:1rem}
-        nav a{color:inherit;text-decoration:none;margin-left:1rem;font-weight:600}
-        nav a:hover{opacity:.9}
-        @media (max-width:600px){nav{display:none}}
+        nav{display:flex;flex-wrap:wrap;align-items:center;gap:0.75rem}
+        .nav-link{color:inherit;text-decoration:none;margin-left:0;font-weight:600;position:relative;padding-bottom:0}
+        .nav-link::after{content:"";position:absolute;left:0;right:0;height:2px;background:currentColor;transform:scaleX(0);transform-origin:left center;transition:transform .22s cubic-bezier(.2,.9,.3,1)}
+        .nav-link:hover::after{transform:scaleX(1)}
+        @media (max-width:600px){
+            header{justify-content:center;padding:1rem;}
+            .brand{width:100%;justify-content:center;}
+            nav{width:100%;justify-content:center;}
+            .nav-link{padding:.5rem 0;}
+        }
     </style>
 </head>
 <body>
@@ -24,9 +31,9 @@
         </div>
 
         <nav aria-label="Primary navigation">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
+            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#">Contact</a>
         </nav>
     </header>
 
